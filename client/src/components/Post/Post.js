@@ -83,8 +83,6 @@ const Post = ({ post, profile }) => {
     }
   };
 
-  // console.log(post);
-
   return (
     <>
       <PostStyled className="col-12 col-md-6 col-lg-4 mb-3 px-2">
@@ -95,6 +93,7 @@ const Post = ({ post, profile }) => {
               className="overview_img"
               src={post?.selectedFile || "memorise1.jpg"}
               alt={`${post?.title} photo`}
+              height={250}
             />
             <div className="overlay">
               <div className="head-1 mb-1">

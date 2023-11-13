@@ -1,13 +1,13 @@
 import Post from "../Post/Post";
 import { useSelector } from "react-redux";
-import { Row, Spinner } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import PostLoading from "./skeletonLoading";
 
 const Posts = ({ isFetch }) => {
   const [loading, setLoading] = useState(true);
   const { posts } = useSelector((state) => state.postsReducer);
-
+  console.log(posts);
   const [profile, setProfile] = useState(
     JSON.parse(localStorage.getItem("profile"))
   );
@@ -30,10 +30,9 @@ const Posts = ({ isFetch }) => {
 
   return (
     <>
-      <Row className="d-flex flex-wrap">
+      <Row className="d-flex flex-wrap justify-content-center">
         {posts?.length &&
           posts?.map((post) => {
-            // console.log(post);
             if (post) {
               return <Post key={post._id} post={post} profile={profile} />;
             }

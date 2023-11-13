@@ -15,7 +15,6 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-file-base64": "^1.0.3",
-    "react-google-login": "^5.2.2",
     "react-hook-form": "^7.31.2",
     "react-image-file-resizer": "^0.4.8",
     "react-redux": "^8.0.1",
@@ -30,7 +29,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "install": "npm install --legacy-peer-deps",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

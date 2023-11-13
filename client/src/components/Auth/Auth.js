@@ -1,9 +1,8 @@
 import { Alert, TextField } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { GoogleLogin } from "react-google-login";
 import AuthStyled from "./Auth.styled";
 
 import { useForm } from "react-hook-form";
@@ -195,15 +194,6 @@ const Auth = ({ type }) => {
               <p>{errors.passwordConfirmation?.message}</p>
             </Col>
           )}
-          {/* Google Login */}
-          {/* <GoogleLogin
-          clientId="482146564043-qh6ni3mj0db7evfejm87r7d69ev4r94u.apps.googleusercontent.com"
-          buttonText="Sign In"
-          onSuccess={(res) => googleSuccsess(res)}
-          onFailure={(err) => googleFailure(err)}
-          cookiePolicy={`single_host_origin`}
-          isSignedIn={true}
-        /> */}
           <Button
             variant="contained"
             className="mt-3 mx-auto col-5"

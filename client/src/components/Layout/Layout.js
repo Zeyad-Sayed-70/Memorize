@@ -55,7 +55,7 @@ const Layout = () => {
   useEffect(() => {
     dispatch(getPosts(page));
     setIsFetch(true);
-    console.log('getposts')
+    console.log("getposts");
     // navigate(`/posts?page=${page}`);
   }, [dispatch, page]);
 
@@ -69,7 +69,7 @@ const Layout = () => {
         <div className="container-flued px-3 mt-5">
           <Row className="content">
             <Col className="col-12 col-md-12 col-lg-9">
-              {isLoading || posts?.length === 0 ? (
+              {isLoading ? (
                 <Row className="flex-wrap">
                   {[1, 2, 3, 4, 5, 6].map((post, i) => (
                     <PostLoading key={i} />
@@ -83,6 +83,7 @@ const Layout = () => {
             <Col
               ref={sectionRef}
               className="form col-12 col-lg-3 d-flex d-lg-block flex-wrap"
+              style={{ flex: 1 }}
             >
               <Col className="col-12">
                 <SearchForm page={page} setIsLoading={setIsLoading} />

@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const post_url = "https://memorize-pxra.onrender.com";
+const BACKRND_URL = "https://memorize-pxra.onrender.com";
+
+const post_url = `${BACKRND_URL}/posts`;
 // const post_url = "http://localhost:5000/posts";
 
 export const FetchPosts = (page) => axios.get(`${post_url}?page=${page}`);
@@ -26,7 +28,7 @@ export const updatePosts = (post, id) => axios.patch(post_url, { id, post });
 export const commentPost = (postId, comment) =>
   axios.patch(`${post_url}/${postId}/comment`, { data: comment });
 
-const account_url = "https://memories1977.herokuapp.com/accounts";
+const account_url = `${BACKRND_URL}/accounts`;
 // const account_url = "http://localhost:5000/accounts";
 
 export const post_signup = (account) =>
@@ -36,7 +38,7 @@ export const post_signin = (account) =>
 export const updateAccount = (account, id) =>
   axios.patch(`${account_url}/${id}`, account);
 
-const feedback_url = "https://memories1977.herokuapp.com/feedback";
+const feedback_url = `${BACKRND_URL}/feedback`;
 // const feedback_url = "http://localhost:5000/feedback";
 
 export const postFeedBack = (feedback) => axios.post(feedback_url, feedback);

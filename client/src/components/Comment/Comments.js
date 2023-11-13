@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Button, TextField } from "@mui/material";
 import CommentsStyled from "./CommentsStyled.styled";

@@ -71,7 +71,7 @@ const PostDetails = () => {
               {moment(post[0]?.createAt).fromNow()}
             </span>
             <hr />
-            <span className="fw-bold">Realtime Chat - comming soon</span>
+            <span className="fw-bold">Comment Section</span>
             <hr />
             <Row>
               <Comments post={post[0]} />
