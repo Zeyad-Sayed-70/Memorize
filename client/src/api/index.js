@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const post_url = "https://memories1977.herokuapp.com/posts";
+const post_url = "https://memorize-pxra.onrender.com";
 // const post_url = "http://localhost:5000/posts";
 
 export const FetchPosts = (page) => axios.get(`${post_url}?page=${page}`);
